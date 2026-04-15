@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos Numéricos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>📊 Métodos Numéricos</h1>
+
+  <div class="card">
+    <label>Función f(x,y)</label>
+    <input id="func" value="(2*x+1)*y">
+
+    <div class="grid">
+      <div>
+        <label>x0</label>
+        <input id="x0" value="0">
+      </div>
+
+      <div>
+        <label>y0</label>
+        <input id="y0" value="3">
+      </div>
+
+      <div>
+        <label>h</label>
+        <input id="h" value="0.05">
+      </div>
+
+      <div>
+        <label>n</label>
+        <input id="n" value="10">
+      </div>
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+  </div>
+
+  <div class="card">
+    <h2>Tabla de resultados</h2>
+    <div class="tabla-container">
+      <table id="tabla">
+        <thead>
+          <tr>
+            <th>x</th>
+            <th>Euler</th>
+            <th>Mejorado</th>
+            <th>k1</th>
+            <th>k2</th>
+            <th>k3</th>
+            <th>k4</th>
+            <th>RK4</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Gráfica</h2>
+    <canvas id="grafica"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
